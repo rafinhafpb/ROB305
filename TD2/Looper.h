@@ -4,9 +4,10 @@
 class Looper
 {
     public:
+        Looper();
         double runLoop(double nLoops = __DBL_MAX__);
         double getSample() {return iLoop;};
-        const void stopLoop() {doStop = true;};
+        void stopLoop() {doStop = true;};
 
     private:
         bool doStop;

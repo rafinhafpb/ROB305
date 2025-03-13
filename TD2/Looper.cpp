@@ -2,13 +2,13 @@
 
 Looper::Looper()
 {
-    double doStop = true;
-    double iLoop = 0;
-}
+    doStop = true;
+    iLoop = 0;
+};
 
 double Looper::runLoop(double nLoops)
 {
-    double iLoop = 0;
+    iLoop = 0;
     doStop = false;
 
     while (iLoop < nLoops && !doStop)
@@ -16,4 +16,4 @@ double Looper::runLoop(double nLoops)
         iLoop++;
     }
     return iLoop;
-}
+};

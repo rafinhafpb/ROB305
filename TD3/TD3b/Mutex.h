@@ -14,6 +14,9 @@ class Mutex
                 Lock(Mutex& mutex);
                 Lock(Mutex& mutex, double timeout_ms);
                 ~Lock();
+
+            private:
+                Mutex& mutex;
         };
     
     private:
