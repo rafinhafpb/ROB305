@@ -4,6 +4,8 @@
 
 class Mutex
 {
+    friend class Monitor;
+    
     public:
         Mutex();
         ~Mutex();
@@ -21,9 +23,9 @@ class Mutex
     
     private:
         pthread_mutex_t posixMutexId;
-        const void lock();
+        void lock();
         bool lock(double timeout_ms);
-        const void unlock();
+        void unlock();
 };
 
 #endif
