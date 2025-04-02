@@ -5,13 +5,13 @@
 
 class CountDown : public Timer
 {
-    public:
-        CountDown(int n);
-        int getCounter() {return m_counter;}
+public:
+    CountDown(int n);
+    int getCounter() const {return m_counter;}
 
-    private:
-        void callback();
-        int m_counter;
+private:
+    void callback();
+    int m_counter;
 };
 
 #endif

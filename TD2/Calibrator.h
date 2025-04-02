@@ -7,20 +7,19 @@
 
 class Calibrator : Timer
 {
-    public:
-        Calibrator(double samplingPeriod_ms, unsigned nSamples);
-        double nLoops(double duration_ms);
-        Looper looper;
+public:
+    Calibrator(double samplingPeriod_ms, unsigned nSamples);
+    double nLoops(double duration_ms) const;
+    Looper looper;
 
-    private:
-        double a;
-        double b;
-        std::vector<double> samples;
-        unsigned nSamples;
+private:
+    double a;
+    double b;
+    std::vector<double> samples;
+    unsigned nSamples;
 
-    protected:
-        void callback();
-
+protected:
+    void callback();
 };
 
 

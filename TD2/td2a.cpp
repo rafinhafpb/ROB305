@@ -9,8 +9,9 @@ void MyHandler(int , siginfo_t* si, void*)
     std::cout << "Counter: " << *p_counter << std::endl;
 }
 
-int main() {
-
+int main() 
+{
+    // ----------- TEST POSIX TIMERS WITH CALLBACK ----------
     int counter = 0;
     int* myData = &counter;
 

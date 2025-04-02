@@ -1,5 +1,4 @@
 #include "CountDown.h"
-#include <iostream>
 
 CountDown::CountDown(int n) : Timer(),  m_counter(n) {}
 

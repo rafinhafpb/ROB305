@@ -3,9 +3,9 @@
 
 class TimeoutException
 {
-    public:
-        TimeoutException(long timeout_ms);
-        const long timeout_ms;
+public:
+    TimeoutException(long timeout_ms);
+    const long timeout_ms;
 };
 
 #endif

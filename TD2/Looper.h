@@ -3,15 +3,15 @@
 
 class Looper
 {
-    public:
-        Looper();
-        double runLoop(double nLoops = __DBL_MAX__);
-        double getSample() {return iLoop;};
-        void stopLoop() {doStop = true;};
+public:
+    Looper();
+    double runLoop(double nLoops = __DBL_MAX__);
+    double getSample() const {return iLoop;};
+    void stopLoop() {doStop = true;};
 
-    private:
-        bool doStop;
-        double iLoop;
+private:
+    bool doStop;
+    double iLoop;
 };
 
 

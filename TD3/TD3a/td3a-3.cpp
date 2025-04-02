@@ -1,17 +1,20 @@
 #include <pthread.h>
 #include <iostream>
 
-struct Data {
+struct Data 
+{
     volatile bool stop;
     volatile double counter;
     pthread_mutex_t mutex;
 };
 
 
-void* incrementer(void* v_data){
+void* incrementer(void* v_data)
+{
     Data* p_data = (Data*) v_data;
 
-    while (not p_data->stop){
+    while (not p_data->stop)
+    {
         pthread_mutex_lock(&p_data->mutex);
         p_data->counter += 1.0;
         pthread_mutex_unlock(&p_data->mutex);

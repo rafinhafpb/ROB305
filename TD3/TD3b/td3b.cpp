@@ -2,7 +2,8 @@
 #include <iostream>
 #include "Mutex.h"
 
-struct Data {
+struct Data 
+{
     Data() : stop(false), counter(0) {}
     volatile bool stop;
     volatile double counter;
@@ -10,14 +11,14 @@ struct Data {
 };
 
 
-void* incrementer(void* v_data){
+void* incrementer(void* v_data)
+{
     Data* p_data = (Data*) v_data;
 
-    while (!p_data->stop){
-        {
-            Mutex::Lock lock(p_data->mutex);
-            p_data->counter += 1.0;
-        }
+    while (!p_data->stop)
+    {
+        Mutex::Lock lock(p_data->mutex);
+        p_data->counter += 1.0;
     }
     return v_data;
 }

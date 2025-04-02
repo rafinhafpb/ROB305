@@ -4,28 +4,28 @@
 
 class Mutex
 {
-    friend class Monitor;
-    
+friend class Monitor;
+
+public:
+    Mutex();
+    ~Mutex();
+
+    class Lock
+    {
     public:
-        Mutex();
-        ~Mutex();
+        Lock(Mutex& mutex);
+        Lock(Mutex& mutex, double timeout_ms);
+        ~Lock();
 
-        class Lock
-        {
-            public:
-                Lock(Mutex& mutex);
-                Lock(Mutex& mutex, double timeout_ms);
-                ~Lock();
-
-            private:
-                Mutex& mutex;
-        };
-    
     private:
-        pthread_mutex_t posixMutexId;
-        void lock();
-        bool lock(double timeout_ms);
-        void unlock();
+        Mutex& mutex;
+    };
+
+private:
+    pthread_mutex_t posixMutexId;
+    void lock();
+    bool lock(double timeout_ms);
+    void unlock();
 };
 
 #endif

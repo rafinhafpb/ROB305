@@ -6,15 +6,15 @@
 class Chrono 
 {
 public:
-    Chrono();                           // Constructor
-    void restart();                     // Methods
+    Chrono();
+    void restart();
     timespec stop();
-    bool isActive() const;
     timespec lap() const;
+    bool isActive() const;
     double lap_ms() const;
 
 private:
-    timespec m_startTime, m_stopTime;   // Atributes
+    timespec m_startTime, m_stopTime;
 };
 
 #endif

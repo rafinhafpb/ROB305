@@ -1,16 +1,19 @@
 #include <pthread.h>
 #include <iostream>
 
-struct Data {
+struct Data 
+{
     volatile bool stop;
     volatile double counter;
 };
 
 
-void* incrementer(void* v_data){
+void* incrementer(void* v_data)
+{
     Data* p_data = (Data*) v_data;
     
-    while (not p_data->stop){
+    while (not p_data->stop)
+    {
         p_data->counter += 1.0;
     }
     return v_data;

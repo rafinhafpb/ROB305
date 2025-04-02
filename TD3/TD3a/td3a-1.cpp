@@ -2,7 +2,8 @@
 #include <iostream>
 
 
-void* incrementer(void* v_stop){
+void* incrementer(void* v_stop)
+{
     volatile bool* p_stop = (volatile bool*) v_stop;
     double counter = 0.0;
     while (not *p_stop){
