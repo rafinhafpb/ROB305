@@ -1,4 +1,4 @@
-# ROB305 Clas Exercises
+# ROB305 Class Exercises
 
 ## TD1
 
