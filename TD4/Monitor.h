@@ -1,6 +1,8 @@
 #ifndef MONITOR_H
 #define MONITOR_H
 #include "../TD3/TD3b/Mutex.h"
+#include "../TD1/timespec.h"
+#include "../TD3/TD3b/TimeoutException.h"
 
 class Monitor 
 {

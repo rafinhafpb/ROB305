@@ -13,7 +13,7 @@ double Looper::runLoop(double nLoops)
 
     while (iLoop < nLoops && !doStop)
     {
-        iLoop++;
+        iLoop += 1.0;
     }
     return iLoop;
 };

@@ -10,7 +10,7 @@ public:
     void stopLoop() {doStop = true;};
 
 private:
-    bool doStop;
+    volatile bool doStop;
     double iLoop;
 };
 

@@ -1,6 +1,4 @@
 #include "Monitor.h"
-#include "../TD1/timespec.h"
-#include "../TD3/TD3b/TimeoutException.h"
 
 Monitor::Monitor(Mutex& mutex) : m_mutex(mutex) 
 {

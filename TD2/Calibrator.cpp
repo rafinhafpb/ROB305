@@ -1,10 +1,9 @@
 #include "Calibrator.h"
-#include <climits>
 
 Calibrator::Calibrator(double samplingPeriod_ms, unsigned nSamples) : nSamples(nSamples)
 {
-    start_ms(samplingPeriod_ms, true);
     samples.reserve(nSamples); // Reserve memory for nSamples elements
+    start_ms(samplingPeriod_ms, true);
     looper.runLoop();
 
     // Linear Regression Calculation

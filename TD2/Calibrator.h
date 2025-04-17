@@ -4,6 +4,7 @@
 #include "Timer.h"
 #include "Looper.h"
 #include <vector>
+#include <climits>
 
 class Calibrator : Timer
 {
